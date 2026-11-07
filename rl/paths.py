@@ -3,6 +3,7 @@ layout is defined in exactly ONE place.
 
     results/online/<env>/s<seed>/              eval.csv, episodes.csv, summary.json, model.pt
     results/offline/<env>/<dataset>/s<seed>/   eval.csv, summary.json, model.pt
+    results/offline_alpha0/<env>/<dataset>/s<seed>/   same files, plain offline DQN (CQL alpha 0)
     results/o2o/<env>/<dataset>/s<seed>/       eval.csv, episodes.csv, summary.json, model.pt
     results/figures/                           every .png
     results/archive/                           old or superseded runs
@@ -14,7 +15,7 @@ import glob
 import os
 
 ROOT = "results"
-MODES = ("online", "offline", "o2o")
+MODES = ("online", "offline", "offline_alpha0", "o2o")   # offline_alpha0 = offline WITHOUT CQL (comparison only)
 
 
 def run_dir(mode: str, env: str, seed: int, dataset: str | None = None, root: str = ROOT) -> str:

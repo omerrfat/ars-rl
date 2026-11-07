@@ -111,7 +111,6 @@ def train_medium_agent(cfg, seed, low):
         if step % cfg.target_update == 0:
             agent.sync_target()
 
-        # Instead of "has it reached the target?", ask "has it reached `low` yet?".
         # We test often (every medium_check_every steps) so we stop soon after it gets there.
         if step >= cfg.learning_starts and step % cfg.medium_check_every == 0:
             score, _ = evaluate(agent, cfg.env_id, cfg.eval_episodes, eval_seed)

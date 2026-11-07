@@ -9,7 +9,8 @@ Usage:
     python train_offline.py --env Acrobot-v1 --policy random --seed 0
     python train_offline.py --env CartPole-v1 --policy medium --alpha 0   # alpha 0 = no CQL
 
-Outputs (in results/offline/<env>/<policy>/s<seed>/, see rl/paths.py):
+Outputs (in results/offline/<env>/<policy>/s<seed>/, see rl/paths.py;
+with --alpha 0 they go to results/offline_alpha0/... instead):
     eval.csv      greedy return every `offline_eval_every` updates
     summary.json  convergence (in gradient steps) and final return
     model.pt      trained Q-network weights (train_o2o.py starts from these)
@@ -65,7 +66,10 @@ def main():
     agent = DQNAgent(obs_dim, n_actions, cfg)
 
     tag = f"offline-{args.policy}_{cfg.env_id}_s{args.seed}"
-    out_dir = run_dir("offline", cfg.env_id, args.seed, args.policy, root=args.out)
+    # Runs without CQL (alpha 0) go to their own folder so they never mix with, or overwrite,
+    # the CQL runs that train_o2o.py loads its starting weights from.
+    mode = "offline_alpha0" if alpha == 0 else "offline"
+    out_dir = run_dir(mode, cfg.env_id, args.seed, args.policy, root=args.out)
     os.makedirs(out_dir, exist_ok=True)
     eval_log = CSVLogger(f"{out_dir}/eval.csv",
                          ["gradient_steps", "eval_return", "eval_std", "loss", "td_loss", "cql", "q_mean"])

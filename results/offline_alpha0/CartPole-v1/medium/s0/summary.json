@@ -1,0 +1,16 @@
+{
+  "mode": "offline-medium",
+  "env": "CartPole-v1",
+  "seed": 0,
+  "dataset": "data/CartPole-v1_medium_20000.npz",
+  "dataset_mean_return": 196.05940594059405,
+  "cql_alpha": 0.0,
+  "online_steps_used": 0,
+  "gradient_steps_used": 20000,
+  "target_return": 475.0,
+  "gradient_steps_to_target": null,
+  "best_eval": 9.5,
+  "final_return": 9.35,
+  "final_std": 0.7262919523166976,
+  "wall_time_s": 122.7
+}

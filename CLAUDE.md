@@ -125,6 +125,10 @@ now returns that key). O2O fields: `o2o_alpha` (0.0, CQL weight while playing on
 ```
 results/online/<env>/s<seed>/              eval.csv, episodes.csv, summary.json, model.pt
 results/offline/<env>/<dataset>/s<seed>/   eval.csv, summary.json, model.pt
+results/offline_alpha0/<env>/<dataset>/s<seed>/   same files; plain offline DQN (CQL alpha 0), comparison only.
+                                           train_offline.py writes here automatically when --alpha 0.
+                                           Only CartPole medium (seeds 0-2) exists; shown as ONE table row
+                                           ("offline, no CQL (alpha 0), medium data"), in no figure.
 results/o2o/<env>/<dataset>/s<seed>/       eval.csv, episodes.csv, summary.json, model.pt
 results/figures/                           every .png (curves_<env>.png, offline_curves.png)
 results/archive/                           old/superseded runs, kept but never used in tables
@@ -143,6 +147,15 @@ the reruns are identical** on all four: steps to target, episodes to target, fin
 mean Q all matched, and eval_return, eval_std, epsilon, loss, td_loss, q_mean differ by exactly 0 in every row
 (max |diff| of eval_return = 0.0). The eval.csv files are not byte-identical only because the 4 Nov files predate
 the `cql` column (the shared columns are exactly equal). All online and O2O runs in the tables are from 6 Nov.
+
+**Order of `results/RESULTS.md` (demo view first, since 7 Nov 2026):** (1) "How to read this" (5 bullets),
+(2) CartPole table + `curves_CartPole-v1.png`, (3) Acrobot table + `curves_Acrobot-v1.png`, then five
+collapsed `<details>` blocks: Datasets, Fine-tuning dip (both envs), Offline CQL curves, Settings and seeds,
+Folders.
+
+**No-CQL comparison (7 Nov 2026, CartPole medium, alpha 0, 3 seeds):** final return 9.1 ± 0.2, last mean Q
+424,205 ± 244,545 (s0 705,674, s1 303,051, s2 263,889). Seed 0 reproduces the earlier 705,674 exactly. Without
+CQL the Q-values diverge on all three seeds, while CQL (alpha 1) keeps Q at 61.3 ± 1.2.
 
 All three configurations, mean ± sample SD over 3 seeds (0, 1, 2), from `python summarise.py`
 (6 Nov 2026; budgets, eval_every, epsilon and alpha unchanged). O2O seed k starts from offline seed k.
