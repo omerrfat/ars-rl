@@ -1,0 +1,12 @@
+{
+  "mode": "online",
+  "env": "Acrobot-v1",
+  "seed": 0,
+  "online_steps_used": 100000,
+  "target_return": -100.0,
+  "steps_to_target": 30000,
+  "episodes_to_target": 186,
+  "final_return": -76.5,
+  "final_std": 13.070960178961606,
+  "wall_time_s": 544.4
+}

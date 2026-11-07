@@ -1,0 +1,5 @@
+gymnasium[classic-control]>=1.0
+torch>=2.2
+numpy
+pandas
+matplotlib

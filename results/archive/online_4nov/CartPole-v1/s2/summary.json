@@ -1,0 +1,12 @@
+{
+  "mode": "online",
+  "env": "CartPole-v1",
+  "seed": 2,
+  "online_steps_used": 50000,
+  "target_return": 475.0,
+  "steps_to_target": 16000,
+  "episodes_to_target": 227,
+  "final_return": 16.7,
+  "final_std": 3.0016662039607267,
+  "wall_time_s": 86.3
+}

@@ -1,0 +1,19 @@
+{
+  "env": "CartPole-v1",
+  "policy": "medium",
+  "seed": 0,
+  "n_transitions": 20000,
+  "n_episodes": 101,
+  "mean_return": 196.05940594059405,
+  "std_return": 84.86761056150556,
+  "n_terminated": 101,
+  "n_truncated": 0,
+  "epsilon": 0.05,
+  "agent_trained_steps": 2100,
+  "agent_greedy_score": 240.1,
+  "agent_progress": 0.4811092264604947,
+  "dataset_progress": 0.38382417784991785,
+  "random_baseline": 22.303571428571427,
+  "stop_score": 158.11249999999998,
+  "intended_band_top": 293.9214285714286
+}

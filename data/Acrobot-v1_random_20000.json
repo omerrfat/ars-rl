@@ -1,0 +1,12 @@
+{
+  "env": "Acrobot-v1",
+  "policy": "random",
+  "seed": 0,
+  "n_transitions": 20000,
+  "n_episodes": 40,
+  "mean_return": -496.275,
+  "std_return": 23.262617544034036,
+  "n_terminated": 1,
+  "n_truncated": 39,
+  "epsilon": 1.0
+}

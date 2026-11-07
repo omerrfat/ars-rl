@@ -1,0 +1,16 @@
+{
+  "mode": "o2o-random",
+  "env": "Acrobot-v1",
+  "seed": 2,
+  "dataset": "data/Acrobot-v1_random_20000.npz",
+  "dataset_mean_return": -496.275,
+  "online_cql_alpha": 0.0,
+  "online_steps_used": 100000,
+  "target_return": -100.0,
+  "start_return": -500.0,
+  "steps_to_target": 6000,
+  "episodes_to_target": 45,
+  "final_return": -76.6,
+  "final_std": 8.616263691415206,
+  "wall_time_s": 1069.6
+}

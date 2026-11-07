@@ -1,0 +1,16 @@
+{
+  "mode": "offline-medium",
+  "env": "Acrobot-v1",
+  "seed": 0,
+  "dataset": "data/Acrobot-v1_medium_20000.npz",
+  "dataset_mean_return": -194.31372549019608,
+  "cql_alpha": 1.0,
+  "online_steps_used": 0,
+  "gradient_steps_used": 20000,
+  "target_return": -100.0,
+  "gradient_steps_to_target": null,
+  "best_eval": -174.1,
+  "final_return": -330.5,
+  "final_std": 168.72744293682638,
+  "wall_time_s": 256.0
+}

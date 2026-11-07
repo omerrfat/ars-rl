@@ -1,0 +1,16 @@
+{
+  "mode": "o2o-medium",
+  "env": "CartPole-v1",
+  "seed": 0,
+  "dataset": "data/CartPole-v1_medium_20000.npz",
+  "dataset_mean_return": 196.05940594059405,
+  "online_cql_alpha": 0.0,
+  "online_steps_used": 50000,
+  "target_return": 475.0,
+  "start_return": 238.2,
+  "steps_to_target": 4000,
+  "episodes_to_target": 39,
+  "final_return": 500.0,
+  "final_std": 0.0,
+  "wall_time_s": 221.2
+}

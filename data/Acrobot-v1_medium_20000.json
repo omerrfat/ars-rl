@@ -1,0 +1,19 @@
+{
+  "env": "Acrobot-v1",
+  "policy": "medium",
+  "seed": 0,
+  "n_transitions": 20000,
+  "n_episodes": 102,
+  "mean_return": -194.31372549019608,
+  "std_return": 71.13753323766808,
+  "n_terminated": 101,
+  "n_truncated": 1,
+  "epsilon": 0.05,
+  "agent_trained_steps": 1800,
+  "agent_greedy_score": -295.6,
+  "agent_progress": 0.5082956259426847,
+  "dataset_progress": 0.7629117006279637,
+  "random_baseline": -497.8,
+  "stop_score": -378.46000000000004,
+  "intended_band_top": -259.12
+}
